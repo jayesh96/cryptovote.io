@@ -6,6 +6,7 @@ from uuid import uuid4
 
 import requests
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 
 class Blockchain:
@@ -32,8 +33,6 @@ class Blockchain:
 
         while current_index < len(chain):
             block = chain[current_index]
-            print(f'{last_block}')
-            print(f'{block}')
             print("\n-----------\n")
             if block['previous_hash'] != self.hash(last_block):
                 return False
@@ -109,7 +108,7 @@ class Blockchain:
 
     @staticmethod
     def valid_proof(last_proof, proof, last_hash):
-        
+
         guess = f'{last_proof}{proof}{last_hash}'.encode()
         guess_hash = hashlib.sha256(guess).hexdigest()
         return guess_hash[:4] == "0000"
@@ -117,6 +116,7 @@ class Blockchain:
 
 # Instantiate the Node
 app = Flask(__name__)
+CORS(app)
 node_identifier = str(uuid4()).replace('-', '')
 blockchain = Blockchain()
 
@@ -204,7 +204,7 @@ def consensus():
 
 if __name__ == '__main__':
     from argparse import ArgumentParser
-    
+
     parser = ArgumentParser()
     parser.add_argument('-p', '--port', default=5000, type=int, help='port to listen on')
     args = parser.parse_args()
