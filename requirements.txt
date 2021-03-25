@@ -173,7 +173,7 @@ pyttsx==1.1
 pytz==2017.3
 PyWavelets==0.5.2
 PyWit==0.4.0
-PyYAML==3.12
+PyYAML==5.4
 pyzmq==16.0.2
 pyzomato==0.5
 QtAwesome==0.4.4
