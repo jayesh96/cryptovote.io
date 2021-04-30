@@ -187,7 +187,7 @@ requests==2.18.4
 requests-file==1.4.2
 requests-ftp==0.3.1
 rope==0.9.4
-rsa==3.4.2
+rsa==4.7
 s3transfer==0.1.11
 scandir==1.5
 scikit-image==0.13.0
