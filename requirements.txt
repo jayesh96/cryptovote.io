@@ -220,7 +220,7 @@ testpath==0.3
 toolz==0.8.2
 tornado==4.5.1
 traitlets==4.3.2
-Twisted==17.9.0
+Twisted==21.2.0
 unicodecsv==0.14.1
 Unirest==1.1.7
 uritemplate==3.0.0
