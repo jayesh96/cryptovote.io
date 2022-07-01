@@ -106,7 +106,7 @@ Markdown==2.6.11
 MarkupSafe==0.23
 matplotlib==2.1.0
 mechanize==0.3.5
-mistune==0.7.4
+mistune==0.8.1
 mkdocs==0.17.2
 mpmath==0.19
 msgpack-python==0.4.8
